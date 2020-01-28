@@ -36,12 +36,3 @@
       image: registry
       ports:
       - "5000:5000"
-- hosts: localhost
-  become: true
-  tasks:
-  - shell: |
-      chmod 777 /var/lib/jenkins/secrets/initialAdminPassword    
-      cat /var/lib/jenkins/secrets/initialAdminPassword
-    register: shell_result
-  - debug:
-      var: shell_result.stdout_lines

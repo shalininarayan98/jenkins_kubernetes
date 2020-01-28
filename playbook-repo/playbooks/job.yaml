@@ -5,7 +5,7 @@
     docker_image:
       build:
         path: "build-{{ lookup('env', 'BUILD_NUMBER') }}"
-      name: jenkins:5000/python-http-server
+      name: 
       tag: "{{ lookup('env', 'IMAGE_TAG') }}"
       source: build
       push: true
